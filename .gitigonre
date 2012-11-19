@@ -1,0 +1,17 @@
+*.class
+
+# SoftLinks
+src/prj/turnstile
+
+# Package Files #
+*.war
+*.ear
+
+# build
+out/
+
+# Personal idea files #
+workspace.xml
+tasks.xml
+
+.idea/dictionaries
