@@ -2,32 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/utils/EventSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/HttpParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/httpparser.iml" afterPath="$PROJECT_DIR$/httpparser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/turnstile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitmodules" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="httpparser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169000240" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356298374212" ignored="false" />
     <file path="/CharType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168326173" ignored="false" />
     <file path="$PROJECT_DIR$/../../SampleProject/src/NIO/Buffer.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168303475" ignored="false" />
     <file path="/Buffer.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168066375" ignored="false" />
-    <file path="/CharParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355170038109" ignored="false" />
+    <file path="/CharParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356207195052" ignored="false" />
     <file path="/EventSource.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169901508" ignored="false" />
     <file path="/fragment.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169118487" ignored="false" />
     <file path="/CharListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169995311" ignored="false" />
     <file path="/CharParserTest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355170730109" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/MessageService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355322489144" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/service/IReadableConversationView.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/service/IChatMessageListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/ServiceFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355404578025" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/ConversationView.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/IMessageServiceConverter.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/config/AppConfiguration.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355341025577" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/protocol/IChatProtocol.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/utils/Utils.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/businessobjects/AddressBookContact.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/service/IAddressBook.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355381366691" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/businessobjects/Relationship.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355311800192" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/project.properties" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355339682228" ignored="false" />
+    <file path="/MessageService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355312219920" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/businessobjects/Account.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355322489144" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/MetaService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/features/ChatFeature.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355339580949" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/UserProfile.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355322489144" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/HistorySource.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355322489144" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/service/IAccountService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355322489144" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/tests/to/talk/jalebi/device/notification/MessageNotificationContentMakerTests.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355323175529" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/gen/to/talk/Manifest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355337287276" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/AndroidManifest.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/controllers/HomeController.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355339580948" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/values/strings.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/.idea/misc.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/.idea/workspace.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355473365195" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/.idea/compiler.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="/AppConfiguration.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355341022653" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/activities/ContactProfileActivity.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/controllers/ContactProfileController.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355381366691" ignored="false" />
+    <file path="/ContactProfileController.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355341727315" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/adapters/ContactProfileListAdapter.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="/MessageServiceConverter.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355380622883" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/MessageServiceConverter.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355381184513" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/service/IAddressBookService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355381366691" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/android/compatibility/actionbar/FragmentsActivityWithActionBar.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/Listeners/ChatStateListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355388753032" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/PacketMaker.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/businessobjects/SearchResult.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/XMPPChatProtocol.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486845187" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/PhoneNumber.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/activities/ContactsTab.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355404578024" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/AccountService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355395755360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/XMPPChatProtocolReceiver.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/app/businessobjects/Receipt.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355480943469" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/ProtocolReceipt.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355480943469" ignored="false" />
+    <file path="/ProtocolReceipt.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355471962747" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/layout/account_set_status_dialog.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/VCard.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/menu/online_contact_context_menu.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/layout/online_contact_item.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/values-de/strings.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/protocol/PresenceSubscriptionStatus.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/values/dimens.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/layout/chat_pane_header.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/layout/account_options_dialog.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/layout/set_status_dialog.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/menu/chat_pane_menu.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/values-zh-rCN/strings.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/res/menu/contact_profile_menu.xml" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/protocol/listenersForService/IVCardListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/tests/to/talk/jalebi/service/AddressBookServiceTests.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847592" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/protocol/listenersForService/IRosterListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/contracts/protocol/listenersForService/ISubscriptionListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355486847593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/store/SqlAddressBookStore.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/activities/HomeActivity.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355488967993" ignored="false" />
+    <file path="/Event.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356207187572" ignored="false" />
+    <file path="$PROJECT_DIR$/../ssc-android/cyclo/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356207166139" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249620605" ignored="false" />
+    <file path="/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249614051" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249489694" ignored="false" />
+    <file path="/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249487225" ignored="false" />
+    <file path="/HTTPRequestState.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356296096510" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +150,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpParser.java">
+      <file leaf-file-name="CharListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="2" column="17" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,56 +162,16 @@
       <file leaf-file-name="CharParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="60" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventSource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/utils/EventSource.java">
+      <file leaf-file-name="HTTPRequestState.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/HTTPRequestState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="100" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#217#232#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="45" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharParserTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="436" selection-end="436" vertical-scroll-proportion="0.077922076">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpRequest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
+            <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitigonre" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/HttpParser.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/HttpParserTest.java" />
         <option value="$PROJECT_DIR$/src/tests/prj/httpparser/HttpParserTest.java" />
@@ -193,15 +206,18 @@
         <option value="$PROJECT_DIR$/src/prj/httpparser/CharParser.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/utils/EventSource.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" />
         <option value="$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/Event.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/XMLState.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/HTTPRequestState.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="700" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -214,7 +230,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -257,7 +273,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnstile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="httpparser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="httpparser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,6 +336,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
@@ -314,8 +357,8 @@
       <module name="httpparser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="prj.httpparser" />
-      <option name="MAIN_CLASS_NAME" value="prj.httpparser.CharParserTest" />
+      <option name="PACKAGE_NAME" value="prj.httpparser.characterparser" />
+      <option name="MAIN_CLASS_NAME" value="prj.httpparser.characterparser.CharParserTest" />
       <option name="METHOD_NAME" value="parse_ShouldFireOneForEachCharacter" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -336,8 +379,8 @@
       <module name="httpparser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="prj.httpparser" />
-      <option name="MAIN_CLASS_NAME" value="prj.httpparser.CharParserTest" />
+      <option name="PACKAGE_NAME" value="prj.httpparser.characterparser" />
+      <option name="MAIN_CLASS_NAME" value="prj.httpparser.characterparser.CharParserTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -467,9 +510,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="700" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="708" extended-state="6" />
+    <editor active="false" />
     <layout>
+      <window_info id="Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -478,17 +522,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.7517241" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21880065" sideWeight="0.97659296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -553,48 +597,29 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="19" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="36" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java">
+    <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/characterparser/CharParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="35" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitigonre">
@@ -609,61 +634,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.11029412" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.14705883" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/characterparser/CharParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.8455882" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/utils/EventSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="100" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#217#232#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="4" column="22" selection-start="103" selection-end="103" vertical-scroll-proportion="0.10676157" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+        <state line="2" column="17" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="60" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/HTTPRequestState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="436" selection-end="436" vertical-scroll-proportion="0.077922076">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
