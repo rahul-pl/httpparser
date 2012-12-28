@@ -2,6 +2,7 @@ package prj.httpparser;
 
 import org.junit.Before;
 import org.junit.Test;
+import prj.httpparser.httpparser.HttpParser;
 
 public class HttpParserTest
 {

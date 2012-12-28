@@ -1,4 +1,4 @@
-package prj.httpparser;
+package prj.httpparser.httpparser;
 
 public class HttpRequestParser
 {

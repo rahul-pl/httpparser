@@ -36,15 +36,12 @@ public class WordParser extends EventSource<WordListener> implements CharListene
                 _stringBuilder.append(character);
                 break;
             case CARRIAGE_RETURN:
-                if (_stringBuilder.length() == 0)
+                if (_stringBuilder.length() > 0)
                 {
-                    _stringBuilder.append(character);
-                }
-                else
-                {
-                    fireErrorEvent();
+                    fireWordParsed(WordType.WORD, _stringBuilder.toString());
                     reset();
                 }
+                _stringBuilder.append(character);
                 break;
             case LINE_FEED:
                 if (_stringBuilder.length() == 1 && _stringBuilder.charAt(0) == '\r')
