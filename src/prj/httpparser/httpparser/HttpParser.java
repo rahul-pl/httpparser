@@ -64,21 +64,14 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         _rawHTTPRequest = new RawHTTPRequest();
         _lastWord = new StringBuilder();
         _stateMachine = new StateMachine<>(HTTPRequestState.ERROR);
+        _stateMachine.start(HTTPRequestState.START);
         initializeStateMachine();
         resetStringBuilder();
     }
 
     public void parse(String input)
     {
-        if (_stateMachine.getCurrentState().equals(HTTPRequestState.START))
-        {
-            _stateMachine.start(HTTPRequestState.START);
-            _wordParser.parse(input);
-        }
-        else
-        {
-            System.out.println("another parse request is already in progress");
-        }
+        _wordParser.parse(input);
     }
 
     @Override
@@ -144,6 +137,7 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         _stateMachine.addTransition(HTTPRequestState.HTTP_VERSION_NAME_PARSED, Word.WordType.CRLF, HTTPRequestState.REQUEST_LINE_COMPLETE);
 
         _stateMachine.addTransition(HTTPRequestState.REQUEST_LINE_COMPLETE, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_NAME_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.REQUEST_LINE_COMPLETE, Word.WordType.CRLF, HTTPRequestState.FINAL);
 
         _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_NAME_PARSED, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_VALUE_PARSING);
 

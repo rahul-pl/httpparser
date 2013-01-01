@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HttpRequestParser.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParserListener.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParserListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" />
     </list>
     <ignored path="httpparser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,9 +84,9 @@
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/activities/HomeActivity.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356348546677" ignored="false" />
     <file path="/Event.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356207187572" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/cyclo/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356207166139" ignored="false" />
-    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357031142360" ignored="false" />
-    <file path="/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357031109582" ignored="false" />
-    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249489694" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357040799533" ignored="false" />
+    <file path="/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357040798237" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357042223741" ignored="false" />
     <file path="/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249487225" ignored="false" />
     <file path="/HTTPRequestState.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356722215402" ignored="false" />
     <file path="/HttpRequestParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356348425491" ignored="false" />
@@ -107,7 +104,7 @@
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/Agent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356347143694" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/notification/AppNotifier.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356348546677" ignored="false" />
-    <file path="/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357031404258" ignored="false" />
+    <file path="/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357041127207" ignored="false" />
     <file path="/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357029458265" ignored="false" />
     <file path="/WordType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356725821575" ignored="false" />
     <file path="/WordListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356725860004" ignored="false" />
@@ -143,7 +140,7 @@
     <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/agent/SecureServerAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356514882673" ignored="false" />
     <file path="/SecureAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356515146927" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/SSCAndroid.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356677479625" ignored="false" />
-    <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/connection/XMLSocket.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356677479626" ignored="false" />
+    <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/connection/XMLSocket.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357033371503" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/push/PushManager.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356677479626" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/session/Session.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356677479626" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/to/talk/sscandroid/session/SessionManager.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356677479626" ignored="false" />
@@ -155,7 +152,7 @@
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/SecureAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HttpParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690496906" ignored="false" />
-    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357031405010" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357041181162" ignored="false" />
     <file path="$PROJECT_DIR$/src/prj/httpparser/httpparser/HttpParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690571419" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/characterparse/CharParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357030462074" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/wordparser/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357030462074" ignored="false" />
@@ -176,6 +173,15 @@
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/turnstile/StateChangeListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022225033" ignored="false" />
     <file path="/StateChangeListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022216070" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPParserListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357028877236" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/agent/HTTPSocket.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357041971706" ignored="false" />
+    <file path="/HTTPSocket.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357042897498" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/agent/HTTPAgentFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357033118038" ignored="false" />
+    <file path="/HTTPAgentFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357033627205" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/agent/HTTPSocketFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357042398545" ignored="false" />
+    <file path="/HTTPSocketFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357033627900" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/agent/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357042401838" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/connection/HTTPSocket.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357043018904" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/connection/HTTPSocketFactory.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357042401838" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,9 +243,8 @@
       <file leaf-file-name="HTTPParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="27" selection-start="3628" selection-end="3628" vertical-scroll-proportion="0.41883767">
+            <state line="5" column="38" selection-start="201" selection-end="201" vertical-scroll-proportion="0.03006012">
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#619#2283#0" expanded="true" />
                 <element signature="e#642#675#0" expanded="true" />
                 <element signature="e#2276#2277#0" expanded="true" />
@@ -589,7 +594,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1050" height="1658" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -771,9 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="27" selection-start="3628" selection-end="3628" vertical-scroll-proportion="0.41883767">
+        <state line="5" column="38" selection-start="201" selection-end="201" vertical-scroll-proportion="0.03006012">
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#619#2283#0" expanded="true" />
             <element signature="e#642#675#0" expanded="true" />
             <element signature="e#2276#2277#0" expanded="true" />
