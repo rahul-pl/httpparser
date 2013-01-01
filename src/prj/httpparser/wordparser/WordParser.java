@@ -30,6 +30,7 @@ public class WordParser extends EventSource<WordListener> implements CharListene
     @Override
     public void charFound(CharType type, char character, int position)
     {
+//        System.out.println(type + " " + character);
         switch (type)
         {
             case PRINTABLE:
@@ -38,7 +39,7 @@ public class WordParser extends EventSource<WordListener> implements CharListene
             case CARRIAGE_RETURN:
                 if (_stringBuilder.length() > 0)
                 {
-                    fireWordParsed(WordType.WORD, _stringBuilder.toString());
+                    fireWordParsed(new Word(Word.WordType.WORD, _stringBuilder.toString()));
                     reset();
                 }
                 _stringBuilder.append(character);
@@ -46,7 +47,7 @@ public class WordParser extends EventSource<WordListener> implements CharListene
             case LINE_FEED:
                 if (_stringBuilder.length() == 1 && _stringBuilder.charAt(0) == '\r')
                 {
-                    fireWordParsed(WordType.CRLF, _stringBuilder.toString());
+                    fireWordParsed(new Word(Word.WordType.CRLF, null));
                     reset();
                 }
                 else
@@ -59,18 +60,18 @@ public class WordParser extends EventSource<WordListener> implements CharListene
             case HORIZONTAL_TAB:
                 if (_stringBuilder.length() != 0)
                 {
-                    fireWordParsed(WordType.WORD, _stringBuilder.toString());
+                    fireWordParsed(new Word(Word.WordType.WORD, _stringBuilder.toString()));
                     reset();
                 }
                 break;
         }
     }
 
-    private void fireWordParsed(WordType wordType, String word)
+    private void fireWordParsed(Word word)
     {
         for (WordListener l : _listeners)
         {
-            l.onWordArrived(wordType, word);
+            l.onWordArrived(word);
         }
     }
 

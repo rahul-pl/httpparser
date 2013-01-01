@@ -11,5 +11,5 @@ public enum HTTPRequestState
     HEADER_FIELD_VALUE_PARSED,
     HEADER_FIELD_VALUE_PARSING,
     FINAL,
-    ERROR
+    ERROR,
 }

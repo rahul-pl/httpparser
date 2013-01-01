@@ -1,33 +1,65 @@
 package prj.httpparser.httpparser;
 
-import prj.httpparser.HttpRequest;
 import prj.httpparser.utils.EventSource;
+import prj.httpparser.wordparser.Word;
 import prj.httpparser.wordparser.WordListener;
 import prj.httpparser.wordparser.WordParser;
-import prj.httpparser.wordparser.WordType;
 import prj.turnstile.InitializationException;
 import prj.turnstile.StateChangeListener;
 import prj.turnstile.StateMachine;
 
+import java.util.Map;
+
 public class HTTPParser extends EventSource<HTTPParserListener> implements WordListener
 {
     private WordParser _wordParser;
-    private StateMachine<HTTPRequestState, WordType> _stateMachine;
-    private StateChangeListener<HTTPRequestState, WordType> _stateChangeListener = new StateChangeListener<HTTPRequestState, WordType>()
+    private StateMachine<HTTPRequestState, Word.WordType> _stateMachine;
+    private StateChangeListener<HTTPRequestState, Word.WordType> _stateChangeListener = new StateChangeListener<HTTPRequestState, Word.WordType>()
     {
         @Override
-        public void onChange(HTTPRequestState oldState, WordType cause, HTTPRequestState newState)
+        public void onChange(HTTPRequestState oldState, Word.WordType cause, HTTPRequestState newState)
         {
-            System.out.println("state changes from \'" + oldState + "\' to \'" + newState + "\' due to \'" + cause + "\'");
+            if (newState.equals(HTTPRequestState.METHOD_NAME_PARSED))
+            {
+                _rawHTTPRequest.setRequestType(RequestType.valueOf(_lastWord.toString().toUpperCase()));
+                resetStringBuilder();
+            }
+            else if (newState.equals(HTTPRequestState.RESOURCE_LOCATION_PARSED))
+            {
+                _rawHTTPRequest.setResourceAddress(_lastWord.toString());
+                resetStringBuilder();
+            }
+            else if (newState.equals(HTTPRequestState.HTTP_VERSION_NAME_PARSED))
+            {
+                _rawHTTPRequest.setHttpVersion(_lastWord.toString());
+                resetStringBuilder();
+            }
+            else if (newState.equals(HTTPRequestState.HEADER_FIELD_VALUE_PARSED))
+            {
+                String header = _lastWord.toString();
+                String field = header.split(":")[0];
+                String value = header.split(":")[1];
+                _rawHTTPRequest.addHeader(field, value);
+                resetStringBuilder();
+            }
+            else if (newState.equals(HTTPRequestState.FINAL))
+            {
+                fireHttpRequestArrived(_rawHTTPRequest);
+            }
         }
     };
+    private RawHTTPRequest _rawHTTPRequest;
+    private StringBuilder _lastWord;
 
     public HTTPParser(WordParser wordParser)
     {
         _wordParser = wordParser;
         _wordParser.addListener(this);
+        _rawHTTPRequest = new RawHTTPRequest();
+        _lastWord = new StringBuilder();
         _stateMachine = new StateMachine<>(HTTPRequestState.ERROR);
         initializeStateMachine();
+        resetStringBuilder();
     }
 
     public void parse(String input)
@@ -36,11 +68,15 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
     }
 
     @Override
-    public void onWordArrived(WordType type, String word)
+    public void onWordArrived(Word word)
     {
         try
         {
-            _stateMachine.process(type);
+            if (word.getType().equals(Word.WordType.WORD))
+            {
+                _lastWord.append(word.getValue());
+            }
+            _stateMachine.process(word.getType());
         }
         catch (InitializationException e)
         {
@@ -54,11 +90,20 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         fireHttpRequestError();
     }
 
-    private void fireHttpRequestArrived(HttpRequest request)
+    private void resetStringBuilder()
     {
-        for (HTTPParserListener l : _listeners)
+        _lastWord = new StringBuilder();
+    }
+
+    private void fireHttpRequestArrived(RawHTTPRequest request)
+    {
+        System.out.println("type " + request.getRequestType());
+        System.out.println("resource address " + request.getResourceAddress());
+        System.out.println("version " + request.getHttpVersion());
+        Map<String, String> headers = request.getHeaders();
+        for (String headerField : headers.keySet())
         {
-            l.onHttpRequest(request);
+            System.out.println("field " + headerField + " value " + headers.get(headerField));
         }
     }
 
@@ -74,24 +119,24 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
     {
         _stateMachine.start(HTTPRequestState.START);
 
-        _stateMachine.addTransition(HTTPRequestState.START, WordType.CRLF);
-        _stateMachine.addTransition(HTTPRequestState.START, WordType.WORD, HTTPRequestState.METHOD_NAME_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.START, Word.WordType.CRLF);
+        _stateMachine.addTransition(HTTPRequestState.START, Word.WordType.WORD, HTTPRequestState.METHOD_NAME_PARSED);
 
-        _stateMachine.addTransition(HTTPRequestState.METHOD_NAME_PARSED, WordType.WORD, HTTPRequestState.RESOURCE_LOCATION_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.METHOD_NAME_PARSED, Word.WordType.WORD, HTTPRequestState.RESOURCE_LOCATION_PARSED);
 
-        _stateMachine.addTransition(HTTPRequestState.RESOURCE_LOCATION_PARSED, WordType.WORD, HTTPRequestState.HTTP_VERSION_NAME_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.RESOURCE_LOCATION_PARSED, Word.WordType.WORD, HTTPRequestState.HTTP_VERSION_NAME_PARSED);
 
-        _stateMachine.addTransition(HTTPRequestState.HTTP_VERSION_NAME_PARSED, WordType.CRLF, HTTPRequestState.REQUEST_LINE_COMPLETE);
+        _stateMachine.addTransition(HTTPRequestState.HTTP_VERSION_NAME_PARSED, Word.WordType.CRLF, HTTPRequestState.REQUEST_LINE_COMPLETE);
 
-        _stateMachine.addTransition(HTTPRequestState.REQUEST_LINE_COMPLETE, WordType.WORD, HTTPRequestState.HEADER_FIELD_NAME_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.REQUEST_LINE_COMPLETE, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_NAME_PARSED);
 
-        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_NAME_PARSED, WordType.WORD, HTTPRequestState.HEADER_FIELD_VALUE_PARSING);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_NAME_PARSED, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_VALUE_PARSING);
 
-        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, WordType.WORD);
-        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, WordType.CRLF, HTTPRequestState.HEADER_FIELD_VALUE_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, Word.WordType.WORD);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, Word.WordType.CRLF, HTTPRequestState.HEADER_FIELD_VALUE_PARSED);
 
-        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSED, WordType.WORD, HTTPRequestState.HEADER_FIELD_NAME_PARSED);
-        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSED, WordType.CRLF, HTTPRequestState.FINAL);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSED, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_NAME_PARSED);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSED, Word.WordType.CRLF, HTTPRequestState.FINAL);
 
         _stateMachine.addStateChangeListener(_stateChangeListener);
     }

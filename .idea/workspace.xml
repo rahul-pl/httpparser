@@ -2,23 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParserListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/RequestType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prj/httpparser/wordparser/Word.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HttpRequestParser.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prj/httpparser/HttpParser.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java" afterPath="$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordType.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPRequestState.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPRequestState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" afterPath="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="httpparser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356349334913" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356717820561" ignored="false" />
     <file path="/CharType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168326173" ignored="false" />
     <file path="$PROJECT_DIR$/../../SampleProject/src/NIO/Buffer.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168303475" ignored="false" />
     <file path="/Buffer.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355168066375" ignored="false" />
     <file path="/CharParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690827125" ignored="false" />
     <file path="/EventSource.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169901508" ignored="false" />
-    <file path="/fragment.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356358881246" ignored="false" />
+    <file path="/fragment.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356725321527" ignored="false" />
     <file path="/CharListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355169995311" ignored="false" />
     <file path="/CharParserTest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1355170730109" ignored="false" />
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/service/MessageService.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356434774086" ignored="false" />
@@ -94,7 +95,7 @@
     <file path="/HTTPAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690301857" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpserver/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249489694" ignored="false" />
     <file path="/Server.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356249487225" ignored="false" />
-    <file path="/HTTPRequestState.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356688078941" ignored="false" />
+    <file path="/HTTPRequestState.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356722215402" ignored="false" />
     <file path="/HttpRequestParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356348425491" ignored="false" />
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/activities/ChatActivity.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356434774086" ignored="false" />
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/ui/controllers/ChatPaneController.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356434774086" ignored="false" />
@@ -110,10 +111,10 @@
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/Agent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356347143694" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../../pwm_android/src/to/talk/jalebi/device/notification/AppNotifier.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356348546677" ignored="false" />
-    <file path="/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356355818058" ignored="false" />
-    <file path="/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356691441552" ignored="false" />
-    <file path="/WordType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356354576117" ignored="false" />
-    <file path="/WordListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356355426235" ignored="false" />
+    <file path="/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027877848" ignored="false" />
+    <file path="/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027378847" ignored="false" />
+    <file path="/WordType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356725821575" ignored="false" />
+    <file path="/WordListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356725860004" ignored="false" />
     <file path="/HttpParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690357719" ignored="false" />
     <file path="/HTTPParserListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356358943308" ignored="false" />
     <file path="/HTTPEvent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687468929" ignored="false" />
@@ -158,10 +159,26 @@
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/cyclo/SecureAgent.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../ssc-android/src/prj/cyclo/TCPReactor.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356687014131" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HttpParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690496906" ignored="false" />
-    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690497829" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357028013445" ignored="false" />
     <file path="$PROJECT_DIR$/src/prj/httpparser/httpparser/HttpParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356690571419" ignored="false" />
     <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/characterparse/CharParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356691492271" ignored="false" />
-    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/wordparser/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356691505416" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/wordparser/WordParser.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027383679" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/turnstile/StateMachine.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357023891152" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/HTTPRequestState.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356722218246" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/HttpRequest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357021024503" ignored="false" />
+    <file path="/HttpRequest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356723460647" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/RequestType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1356723176769" ignored="false" />
+    <file path="/RequestType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357026465365" ignored="false" />
+    <file path="/StateMachine.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022274561" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/RawHTTPRequest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027945043" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/httpparser/RequestType.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027502225" ignored="false" />
+    <file path="/RawHTTPRequest.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357027937546" ignored="false" />
+    <file path="/Typical.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357021804178" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/turnstile/Typical.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357021805218" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/httpparser/wordparser/Word.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357023917630" ignored="false" />
+    <file path="/Word.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022369306" ignored="false" />
+    <file path="$PROJECT_DIR$/../../HTTPServer/src/prj/turnstile/StateChangeListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022225033" ignored="false" />
+    <file path="/StateChangeListener.java" changelist="fe35f403-ffaa-4e22-8aff-fccfe599ad9b" time="1357022216070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,8 +193,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -212,6 +227,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -221,28 +237,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WordType.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordType.java">
+      <file leaf-file-name="HttpRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateMachine.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HTTPParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="27" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateMachine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prj/turnstile/StateMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.1010101">
+              <folding>
+                <element signature="e#1589#1603#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="40" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTTPEvent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPEvent.java">
+      <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+            <state line="2" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prj/httpparser/RequestType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -251,7 +307,7 @@
       <file leaf-file-name="HTTPRequestState.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPRequestState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="9" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+            <state line="8" column="12" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,29 +331,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/prj/httpparser/utils/EventSource.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java" />
-        <option value="$PROJECT_DIR$/tests/prj/httpparser/CharParserTest.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/Event.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/XMLState.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/HTTPRequestState.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/HttpRequestParser.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/HTTPParser.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordType.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java" />
-        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParserListener.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPEvent.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPRequestState.java" />
         <option value="$PROJECT_DIR$/src/prj/httpparser/httpparser/HttpParser.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/RequestType.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordType.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/Word.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java" />
+        <option value="$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java" />
+        <option value="$PROJECT_DIR$/src/prj/turnstile/Typical.java" />
+        <option value="$PROJECT_DIR$/src/prj/turnstile/StateMachine.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1050" />
-    <option name="height" value="1658" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -340,6 +396,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="httpparser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="httpparser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="httpparser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnstile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,6 +486,7 @@
       <recent name="tests.prj.httpparser" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="prj.httpparser" />
       <recent name="prj.httpparser.httpparser" />
       <recent name="prj.httpparser.wordparser" />
       <recent name="prj.httpparser.characterparse" />
@@ -574,8 +653,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1050" height="1658" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1050" height="778" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -590,7 +669,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2689243" sideWeight="0.99934983" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32968128" sideWeight="0.89531857" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -661,11 +740,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/HttpParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/prj/httpparser/characterparser/CharParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.8455882" />
@@ -678,39 +752,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="53" selection-start="116" selection-end="116" vertical-scroll-proportion="0.10714286">
-          <folding />
-        </state>
+        <state line="4" column="53" selection-start="116" selection-end="116" vertical-scroll-proportion="0.10714286" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/characterparse/CharParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.16071428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="21" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.29464287">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="27" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParserListener.java">
@@ -720,38 +772,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.08035714">
+        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.009933775">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPRequestState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+        <state line="8" column="12" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/RequestType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+        <state line="4" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/HttpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/httpparser/HTTPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="27" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prj/turnstile/StateMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prj/httpparser/wordparser/WordType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="4" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.1010101">
+          <folding>
+            <element signature="e#1589#1603#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
