@@ -22,7 +22,13 @@ public class WordParser extends EventSource<WordListener> implements CharListene
         _charParser.parse(inputString);
     }
 
-    private void reset()
+    public void reset()
+    {
+        resetStringBuilder();
+        _charParser.reset();
+    }
+
+    private void resetStringBuilder()
     {
         _stringBuilder = new StringBuilder();
     }
@@ -40,7 +46,7 @@ public class WordParser extends EventSource<WordListener> implements CharListene
                 if (_stringBuilder.length() > 0)
                 {
                     fireWordParsed(new Word(Word.WordType.WORD, _stringBuilder.toString()));
-                    reset();
+                    resetStringBuilder();
                 }
                 _stringBuilder.append(character);
                 break;
@@ -48,12 +54,12 @@ public class WordParser extends EventSource<WordListener> implements CharListene
                 if (_stringBuilder.length() == 1 && _stringBuilder.charAt(0) == '\r')
                 {
                     fireWordParsed(new Word(Word.WordType.CRLF, null));
-                    reset();
+                    resetStringBuilder();
                 }
                 else
                 {
                     fireErrorEvent();
-                    reset();
+                    resetStringBuilder();
                 }
                 break;
             case SPACE:
@@ -61,7 +67,7 @@ public class WordParser extends EventSource<WordListener> implements CharListene
                 if (_stringBuilder.length() != 0)
                 {
                     fireWordParsed(new Word(Word.WordType.WORD, _stringBuilder.toString()));
-                    reset();
+                    resetStringBuilder();
                 }
                 break;
         }

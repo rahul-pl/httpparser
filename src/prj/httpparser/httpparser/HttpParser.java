@@ -8,8 +8,6 @@ import prj.turnstile.InitializationException;
 import prj.turnstile.StateChangeListener;
 import prj.turnstile.StateMachine;
 
-import java.util.Map;
-
 public class HTTPParser extends EventSource<HTTPParserListener> implements WordListener
 {
     private WordParser _wordParser;
@@ -19,32 +17,40 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         @Override
         public void onChange(HTTPRequestState oldState, Word.WordType cause, HTTPRequestState newState)
         {
-            if (newState.equals(HTTPRequestState.METHOD_NAME_PARSED))
+            try
             {
-                _rawHTTPRequest.setRequestType(RequestType.valueOf(_lastWord.toString().toUpperCase()));
-                resetStringBuilder();
+                if (newState.equals(HTTPRequestState.METHOD_NAME_PARSED))
+                {
+                    _rawHTTPRequest.setRequestType(RequestType.valueOf(_lastWord.toString().toUpperCase()));
+                    resetStringBuilder();
+                }
+                else if (newState.equals(HTTPRequestState.RESOURCE_LOCATION_PARSED))
+                {
+                    _rawHTTPRequest.setResourceAddress(_lastWord.toString());
+                    resetStringBuilder();
+                }
+                else if (newState.equals(HTTPRequestState.HTTP_VERSION_NAME_PARSED))
+                {
+                    _rawHTTPRequest.setHttpVersion(_lastWord.toString());
+                    resetStringBuilder();
+                }
+                else if (newState.equals(HTTPRequestState.HEADER_FIELD_VALUE_PARSED))
+                {
+                    String header = _lastWord.toString();
+                    String field = header.split(":")[0];
+                    String value = header.split(":")[1];
+                    _rawHTTPRequest.addHeader(field, value);
+                    resetStringBuilder();
+                }
+                else if (newState.equals(HTTPRequestState.FINAL))
+                {
+                    fireHttpRequestArrived();
+                }
             }
-            else if (newState.equals(HTTPRequestState.RESOURCE_LOCATION_PARSED))
+            catch (Exception e)
             {
-                _rawHTTPRequest.setResourceAddress(_lastWord.toString());
-                resetStringBuilder();
-            }
-            else if (newState.equals(HTTPRequestState.HTTP_VERSION_NAME_PARSED))
-            {
-                _rawHTTPRequest.setHttpVersion(_lastWord.toString());
-                resetStringBuilder();
-            }
-            else if (newState.equals(HTTPRequestState.HEADER_FIELD_VALUE_PARSED))
-            {
-                String header = _lastWord.toString();
-                String field = header.split(":")[0];
-                String value = header.split(":")[1];
-                _rawHTTPRequest.addHeader(field, value);
-                resetStringBuilder();
-            }
-            else if (newState.equals(HTTPRequestState.FINAL))
-            {
-                fireHttpRequestArrived(_rawHTTPRequest);
+                e.printStackTrace();
+                onError();
             }
         }
     };
@@ -64,7 +70,15 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
 
     public void parse(String input)
     {
-        _wordParser.parse(input);
+        if (_stateMachine.getCurrentState().equals(HTTPRequestState.START))
+        {
+            _stateMachine.start(HTTPRequestState.START);
+            _wordParser.parse(input);
+        }
+        else
+        {
+            System.out.println("another parse request is already in progress");
+        }
     }
 
     @Override
@@ -81,12 +95,16 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         catch (InitializationException e)
         {
             e.printStackTrace();
+            onError();
         }
     }
 
     @Override
     public void onError()
     {
+        System.out.println("Error occurred");
+        resetStringBuilder();
+        _wordParser.reset();
         fireHttpRequestError();
     }
 
@@ -95,15 +113,12 @@ public class HTTPParser extends EventSource<HTTPParserListener> implements WordL
         _lastWord = new StringBuilder();
     }
 
-    private void fireHttpRequestArrived(RawHTTPRequest request)
+    private void fireHttpRequestArrived()
     {
-        System.out.println("type " + request.getRequestType());
-        System.out.println("resource address " + request.getResourceAddress());
-        System.out.println("version " + request.getHttpVersion());
-        Map<String, String> headers = request.getHeaders();
-        for (String headerField : headers.keySet())
+        _stateMachine.start(HTTPRequestState.START);
+        for (HTTPParserListener l : _listeners)
         {
-            System.out.println("field " + headerField + " value " + headers.get(headerField));
+            l.onHttpRequest(_rawHTTPRequest);
         }
     }
 
