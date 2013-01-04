@@ -1,4 +1,4 @@
-package prj.turnstile;
+package prj.httpparser.turnstile;
 
 import java.util.*;
 

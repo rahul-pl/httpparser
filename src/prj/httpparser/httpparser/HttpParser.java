@@ -4,9 +4,9 @@ import prj.httpparser.utils.EventSource;
 import prj.httpparser.wordparser.Word;
 import prj.httpparser.wordparser.WordListener;
 import prj.httpparser.wordparser.WordParser;
-import prj.turnstile.InitializationException;
-import prj.turnstile.StateChangeListener;
-import prj.turnstile.StateMachine;
+import prj.httpparser.turnstile.InitializationException;
+import prj.httpparser.turnstile.StateChangeListener;
+import prj.httpparser.turnstile.StateMachine;
 
 public class HTTPParser extends EventSource<HTTPParserListener> implements WordListener
 {
