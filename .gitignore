@@ -1,8 +1,5 @@
 *.class
 
-# SoftLinks
-src/prj/turnstile
-
 # Package Files #
 *.war
 *.ear
