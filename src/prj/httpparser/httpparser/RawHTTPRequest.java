@@ -9,6 +9,9 @@ public class RawHTTPRequest
     private String resourceAddress;
     private String httpVersion;
     private Map<String, String> headers;
+    private static String SP = " ";
+    private static String CRLF = "\r\n";
+    private static final Object COLON = ":";
 
     public RawHTTPRequest()
     {
@@ -53,5 +56,18 @@ public class RawHTTPRequest
     public Map<String, String> getHeaders()
     {
         return headers;
+    }
+
+    @Override
+    public String toString()
+    {
+        StringBuffer sb = new StringBuffer();
+        sb.append(requestType.toString()).append(SP).append(resourceAddress).append(SP).append(httpVersion).append(CRLF);
+        for (String headerField : headers.keySet())
+        {
+            sb.append(headerField).append(COLON).append(SP).append(headers.get(headerField)).append(CRLF);
+        }
+        sb.append(CRLF);
+        return sb.toString();
     }
 }
