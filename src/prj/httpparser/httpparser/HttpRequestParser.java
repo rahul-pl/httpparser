@@ -1,6 +1,6 @@
 package prj.httpparser.httpparser;
 
-public class HttpRequestParser
+public class HTTPRequestParser
 {
     public void parse(String inputString)
     {
