@@ -1,5 +1,5 @@
 package prj.httpparser;
 
-public class HttpRequest
+public class HTTPRequest
 {
 }
