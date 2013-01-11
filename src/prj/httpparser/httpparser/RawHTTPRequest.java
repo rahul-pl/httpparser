@@ -9,6 +9,7 @@ public class RawHTTPRequest
     private String resourceAddress;
     private String httpVersion;
     private Map<String, String> headers;
+    private Map<String, String> GETParams;
     private static String SP = " ";
     private static String CRLF = "\r\n";
     private static final Object COLON = ":";
@@ -16,6 +17,7 @@ public class RawHTTPRequest
     public RawHTTPRequest()
     {
         headers = new HashMap<>();
+        GETParams = new HashMap<>();
     }
 
     public RequestType getRequestType()
@@ -58,6 +60,11 @@ public class RawHTTPRequest
         return headers;
     }
 
+    public Map<String, String> getGETParams()
+    {
+        return GETParams;
+    }
+
     @Override
     public String toString()
     {
@@ -69,5 +76,18 @@ public class RawHTTPRequest
         }
         sb.append(CRLF);
         return sb.toString();
+    }
+
+    public void setGETParams(String paramString)
+    {
+        String[] params = paramString.split("&");
+        for (String paramElement : params)
+        {
+            if (paramElement.contains("="))
+            {
+                String[] keyValue = paramElement.split("=");
+                GETParams.put(keyValue[0], keyValue[1]);
+            }
+        }
     }
 }
