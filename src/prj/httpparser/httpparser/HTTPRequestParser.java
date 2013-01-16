@@ -1,17 +1,20 @@
 package prj.httpparser.httpparser;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import prj.httpparser.turnstile.InitializationException;
+import prj.httpparser.turnstile.StateChangeListener;
+import prj.httpparser.turnstile.StateMachine;
 import prj.httpparser.utils.EventSource;
 import prj.httpparser.wordparser.Word;
 import prj.httpparser.wordparser.WordListener;
 import prj.httpparser.wordparser.WordParser;
-import prj.httpparser.turnstile.InitializationException;
-import prj.httpparser.turnstile.StateChangeListener;
-import prj.httpparser.turnstile.StateMachine;
 
 public class HTTPRequestParser extends EventSource<HTTPParserListener> implements WordListener
 {
     private WordParser _wordParser;
     private StateMachine<HTTPRequestState, Word.WordType> _stateMachine;
+    private Logger _logger;
     private StateChangeListener<HTTPRequestState, Word.WordType> _stateChangeListener = new StateChangeListener<HTTPRequestState, Word.WordType>()
     {
         @Override
@@ -54,7 +57,7 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
             }
             catch (Exception e)
             {
-                e.printStackTrace();
+                _logger.warn("Exception while parsing Request ", e);
                 onError();
             }
         }
@@ -64,6 +67,7 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
 
     public HTTPRequestParser(WordParser wordParser)
     {
+        _logger = LoggerFactory.getLogger(HTTPRequestParser.class.getSimpleName());
         _wordParser = wordParser;
         _wordParser.addListener(this);
         _rawHTTPRequest = new RawHTTPRequest();
@@ -100,7 +104,6 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
     @Override
     public void onError()
     {
-        System.out.println("Error occurred");
         resetStringBuilder();
         _wordParser.reset();
         fireHttpRequestError();
