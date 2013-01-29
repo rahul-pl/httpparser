@@ -94,9 +94,9 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
             }
             _stateMachine.process(word.getType());
         }
-        catch (InitializationException e)
+        catch (InitializationException | IllegalStateException e)
         {
-            e.printStackTrace();
+            _logger.error("Exception in turnstile ", e);
             onError();
         }
     }
@@ -148,6 +148,7 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
         _stateMachine.addTransition(HTTPRequestState.REQUEST_LINE_COMPLETE, Word.WordType.CRLF, HTTPRequestState.FINAL);
 
         _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_NAME_PARSED, Word.WordType.WORD, HTTPRequestState.HEADER_FIELD_VALUE_PARSING);
+        _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_NAME_PARSED, Word.WordType.CRLF, HTTPRequestState.HEADER_FIELD_VALUE_PARSED);
 
         _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, Word.WordType.WORD);
         _stateMachine.addTransition(HTTPRequestState.HEADER_FIELD_VALUE_PARSING, Word.WordType.CRLF, HTTPRequestState.HEADER_FIELD_VALUE_PARSED);
