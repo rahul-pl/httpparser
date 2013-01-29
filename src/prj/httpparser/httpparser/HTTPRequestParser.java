@@ -45,9 +45,13 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
                 else if (newState.equals(HTTPRequestState.HEADER_FIELD_VALUE_PARSED))
                 {
                     String header = _lastWord.toString();
-                    String field = header.split(":")[0];
-                    String value = header.split(":")[1];
-                    _rawHTTPRequest.addHeader(field, value);
+                    String[] headerSplit = header.split(":");
+                    if (headerSplit.length == 2)
+                    {
+                        String field = headerSplit[0];
+                        String value = headerSplit[1];
+                        _rawHTTPRequest.addHeader(field, value);
+                    }
                     resetStringBuilder();
                 }
                 else if (newState.equals(HTTPRequestState.FINAL))
