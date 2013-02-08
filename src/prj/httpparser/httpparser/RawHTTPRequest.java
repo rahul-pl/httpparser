@@ -51,19 +51,32 @@ public class RawHTTPRequest
         this.httpVersion = httpVersion;
     }
 
-    public void addHeader(String field, String value)
-    {
-        headers.put(field, value);
-    }
-
     public Map<String, String> getHeaders()
     {
         return headers;
     }
 
+    public void addHeader(String field, String value)
+    {
+        headers.put(field, value);
+    }
+
     public Map<String, String> getGETParams()
     {
         return GETParams;
+    }
+
+    public void setGETParams(String paramString)
+    {
+        String[] params = paramString.split("&");
+        for (String paramElement : params)
+        {
+            if (paramElement.contains("="))
+            {
+                String[] keyValue = paramElement.split("=");
+                GETParams.put(keyValue[0], keyValue[1]);
+            }
+        }
     }
 
     public String getBody()
@@ -86,19 +99,10 @@ public class RawHTTPRequest
             sb.append(headerField).append(COLON).append(SP).append(headers.get(headerField)).append(CRLF);
         }
         sb.append(CRLF);
-        return sb.toString();
-    }
-
-    public void setGETParams(String paramString)
-    {
-        String[] params = paramString.split("&");
-        for (String paramElement : params)
+        if (body != null)
         {
-            if (paramElement.contains("="))
-            {
-                String[] keyValue = paramElement.split("=");
-                GETParams.put(keyValue[0], keyValue[1]);
-            }
+            sb.append(body);
         }
+        return sb.toString();
     }
 }
