@@ -5,16 +5,16 @@ import prj.httpparser.utils.EventSource;
 public class CharParser extends EventSource<CharListener>
 {
     boolean reset;
-
-    public CharParser()
-    {
-    }
+    int position;
+    String current;
 
     public void parse(String input)
     {
+        current = input;
         reset = false;
         for (int i = 0; i < input.length(); i++)
         {
+            position = i;
             if (reset)
             {
                 break;
@@ -30,7 +30,13 @@ public class CharParser extends EventSource<CharListener>
 
     public void reset()
     {
+        current = null;
         reset = true;
+    }
+
+    public String remaining()
+    {
+        return current.substring(position);
     }
 
     private CharType getCharType(char c)

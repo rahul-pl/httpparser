@@ -56,6 +56,9 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
                 }
                 else if (newState.equals(HTTPRequestState.FINAL))
                 {
+                    _rawHTTPRequest.setBody(_wordParser.remaining());
+                    resetStringBuilder();
+                    _wordParser.reset();
                     fireHttpRequestArrived();
                 }
             }

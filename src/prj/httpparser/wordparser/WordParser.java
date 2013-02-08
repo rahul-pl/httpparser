@@ -28,6 +28,11 @@ public class WordParser extends EventSource<WordListener> implements CharListene
         _charParser.reset();
     }
 
+    public String remaining()
+    {
+        return _charParser.remaining();
+    }
+
     private void resetStringBuilder()
     {
         _stringBuilder = new StringBuilder();

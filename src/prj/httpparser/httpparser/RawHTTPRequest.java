@@ -10,6 +10,7 @@ public class RawHTTPRequest
     private String httpVersion;
     private Map<String, String> headers;
     private Map<String, String> GETParams;
+    private String body;
     private static String SP = " ";
     private static String CRLF = "\r\n";
     private static final Object COLON = ":";
@@ -63,6 +64,16 @@ public class RawHTTPRequest
     public Map<String, String> getGETParams()
     {
         return GETParams;
+    }
+
+    public String getBody()
+    {
+        return body;
+    }
+
+    public void setBody(String body)
+    {
+        this.body = body;
     }
 
     @Override
