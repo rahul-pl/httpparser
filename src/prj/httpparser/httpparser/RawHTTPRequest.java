@@ -71,9 +71,9 @@ public class RawHTTPRequest
         String[] params = paramString.split("&");
         for (String paramElement : params)
         {
-            if (paramElement.contains("="))
+            String[] keyValue = paramElement.split("=");
+            if (keyValue.length == 2)
             {
-                String[] keyValue = paramElement.split("=");
                 GETParams.put(keyValue[0], keyValue[1]);
             }
         }
