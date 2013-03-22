@@ -4,5 +4,5 @@ public interface WordListener
 {
     public void onWordArrived(Word word);
 
-    public void onError();
+    public void onParsingError(String requestString);
 }

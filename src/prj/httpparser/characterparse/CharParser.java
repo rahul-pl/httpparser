@@ -39,6 +39,11 @@ public class CharParser extends EventSource<CharListener>
         return current.substring(position + 1);
     }
 
+    public String current()
+    {
+        return current;
+    }
+
     private CharType getCharType(char c)
     {
         switch (c)

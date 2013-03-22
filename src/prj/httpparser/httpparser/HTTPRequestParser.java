@@ -65,7 +65,7 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
             catch (Exception e)
             {
                 _logger.warn("Exception while parsing Request ", e);
-                onError();
+                cleanup();
             }
         }
     };
@@ -103,13 +103,20 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
         }
         catch (InitializationException | IllegalStateException e)
         {
-            _logger.error("Exception in turnstile ", e);
-            onError();
+            _logger.warn("Exception in turnstile ", e);
+            cleanup();
         }
     }
 
     @Override
-    public void onError()
+    public void onParsingError(String requestString)
+    {
+        _logger.warn("parsing error while parsing "
+                + requestString.replace("\r", "\\r").replace("\n", "\\n").replace("\t", "\\t"));
+        cleanup();
+    }
+
+    private void cleanup()
     {
         resetStringBuilder();
         _wordParser.reset();

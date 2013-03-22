@@ -1,5 +1,7 @@
 package prj.httpparser.wordparser;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import prj.httpparser.characterparse.CharListener;
 import prj.httpparser.characterparse.CharParser;
 import prj.httpparser.characterparse.CharType;
@@ -9,9 +11,11 @@ public class WordParser extends EventSource<WordListener> implements CharListene
 {
     private CharParser _charParser;
     private StringBuilder _stringBuilder;
+    private Logger _logger;
 
     public WordParser(CharParser charParser)
     {
+        _logger = LoggerFactory.getLogger(WordParser.class);
         _charParser = charParser;
         _charParser.addListener(this);
         _stringBuilder = new StringBuilder();
@@ -63,7 +67,8 @@ public class WordParser extends EventSource<WordListener> implements CharListene
                 }
                 else
                 {
-                    fireErrorEvent();
+                    _logger.warn("line feed only expected after a carriage return");
+                    fireErrorEvent(_charParser.current());
                     resetStringBuilder();
                 }
                 break;
@@ -86,11 +91,11 @@ public class WordParser extends EventSource<WordListener> implements CharListene
         }
     }
 
-    private void fireErrorEvent()
+    private void fireErrorEvent(String requestString)
     {
         for (WordListener l : _listeners)
         {
-            l.onError();
+            l.onParsingError(requestString);
         }
     }
 }
