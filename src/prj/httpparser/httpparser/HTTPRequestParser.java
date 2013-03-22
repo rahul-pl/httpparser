@@ -64,7 +64,9 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
             }
             catch (Exception e)
             {
-                _logger.warn("Exception while parsing Request ", e);
+                _logger.warn("Exception while processing params on state change " +
+                        _wordParser.current().replace("\r", "\\r").replace("\n", "\\n").replace("\t", "\\t"),
+                        e);
                 cleanup();
             }
         }
@@ -101,18 +103,16 @@ public class HTTPRequestParser extends EventSource<HTTPParserListener> implement
             }
             _stateMachine.process(word.getType());
         }
-        catch (InitializationException | IllegalStateException e)
+        catch (InitializationException e)
         {
-            _logger.warn("Exception in turnstile ", e);
-            cleanup();
         }
     }
 
     @Override
     public void onParsingError(String requestString)
     {
-        _logger.warn("parsing error while parsing "
-                + requestString.replace("\r", "\\r").replace("\n", "\\n").replace("\t", "\\t"));
+        _logger.warn("parsing error while parsing {}",
+                requestString.replace("\r", "\\r").replace("\n", "\\n").replace("\t", "\\t"));
         cleanup();
     }
 
