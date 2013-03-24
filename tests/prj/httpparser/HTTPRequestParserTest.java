@@ -37,4 +37,11 @@ public class HTTPRequestParserTest
                     }
                 }));
     }
+
+    @Test
+    public void parse_invalidRequest()
+    {
+        httpParser.parse("GET /\r\n");
+        verify(mockRequestListener).onHttpRequestError();
+    }
 }
