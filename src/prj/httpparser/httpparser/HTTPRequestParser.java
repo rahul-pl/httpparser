@@ -102,8 +102,12 @@ public class HTTPRequestParser extends EventSource<HTTPRequestListener> implemen
             }
             _stateMachine.process(word.getType());
         }
-        catch (InitializationException e)
+        catch (InitializationException | IllegalStateException e)
         {
+            _logger.warn("Exception in state machine state change " +
+                    _wordParser.current().replace("\r", "\\r").replace("\n", "\\n").replace("\t", "\\t"),
+                    e);
+            cleanup();
         }
     }
 
