@@ -1,6 +1,6 @@
 package prj.httpparser.httpparser;
 
-public interface HTTPParserListener
+public interface HTTPRequestListener
 {
     public void onHttpRequest(RawHTTPRequest httpRequest);
 
