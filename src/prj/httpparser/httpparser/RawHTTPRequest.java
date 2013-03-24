@@ -105,4 +105,27 @@ public class RawHTTPRequest
         }
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (o instanceof RawHTTPRequest)
+        {
+            RawHTTPRequest request = (RawHTTPRequest) o;
+            if (request.getRequestType() == requestType
+                    && request.getResourceAddress().equals(resourceAddress)
+                    && request.getHttpVersion().equals(httpVersion))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
